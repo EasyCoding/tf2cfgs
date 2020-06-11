@@ -1,5 +1,5 @@
 Config name: mastercomfig
-Preset name: ultra
+Preset name: low
 Author: mastercoms
 License: MIT
 Repository: https://github.com/mastercomfig/mastercomfig
