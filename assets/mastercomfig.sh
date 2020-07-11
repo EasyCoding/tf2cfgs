@@ -6,7 +6,7 @@ function build {
     local sdir="$DIRNAME/mastercomfig/presets/mastercomfig-$1-preset/cfg"
     local dfile="../$2/cfg/autoexec.cfg"
     awk '{print};ENDFILE{print ""}' "$sdir/comfig/comfig.cfg" "$sdir/presets/$1.cfg" "$sdir/comfig/modules_run.cfg" "$sdir/comfig/finalize.cfg" "$sdir/comfig/block_antialias.cfg" "$sdir/comfig/echo.cfg" > "$dfile"
-    sed -e "/block_antialias/d" -i "$dfile"
+    sed -e "/block_antialias/,+1d" -i "$dfile"
     unix2dos -q "$dfile"
 }
 
